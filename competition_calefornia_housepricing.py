@@ -10,7 +10,7 @@ from sklearn.linear_model import LassoCV,Lasso
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.feature_selection import SelectFromModel
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score,mean_squared_error,mean_absolute_error
+from sklearn.metrics import r2_score,mean_squared_error,mean_absolute_error,root_mean_squared_error
 from sklearn.impute import SimpleImputer
 
 path = "data/train.csv"
@@ -81,7 +81,8 @@ y_pred = pipeline.predict(X_validate)
 
 print("MSE: ",mean_squared_error(y_validate,y_pred),'\n', #692130828.48
       "R2 score: ",r2_score(y_validate,y_pred),'\n', #0.838
-      "MAE: ",mean_absolute_error(y_validate,y_pred)) #17153.67
+      "MAE: ",mean_absolute_error(y_validate,y_pred),'\n', #17153.67
+     "RMSE:", root_mean_squared_error(y_validate,y_pred)) #26308.379 
 
 
 #The pipeline seems to have worked after changing n_estimator a few times and i was able to achive an r2_score of 0.838 on the first go which is pretty good,
@@ -111,4 +112,5 @@ submission = pd.DataFrame({
 })
 
 submission.to_csv("sumission.csv",index= False) #index=False means not to include indexes in the csv 
+
 
