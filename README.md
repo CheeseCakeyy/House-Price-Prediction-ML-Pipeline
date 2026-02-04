@@ -31,13 +31,14 @@ Given structured housing-related attributes, build a regression model capable of
 
 ## Technologies Used
 
+ ```text
 - Python  
 - pandas, numpy  
 - scikit-learn  
 - matplotlib  
 - TensorFlow / Keras  
 - Kaggle Notebooks  
-
+ ```
 ---
 
 # Iteration 1 – Classical Machine Learning Approach (Baseline)
@@ -62,13 +63,14 @@ All preprocessing and modeling steps were implemented using **Pipelines** to ens
 ---
 
 ### Model Performance (Iteration 1)
-
+ 
+ ```text
 - Validation **R² score**: ~0.84  
 - Validation **MAE**: ~17,200  
 - Validation **RMSE**: ~26,308  
 - **Kaggle Leaderboard Score(Test RMSE Score)**: ~16963.88  
 - Rank: **1840 / 4647 (~Top 39%)**
-
+ ```
 This served as a strong baseline for further experimentation.
 
 ---
@@ -93,13 +95,13 @@ After establishing a solid classical ML baseline, a second iteration was impleme
 
 A simple fully connected network was designed for tabular regression:
 
+```text
 Input (79 features)
 → Dense(160, relu)
 → Dense(80, relu)
 → Dense(40, relu)
 → Output(1)
-
-
+```
 
 - Activation: ReLU for hidden layers  
 - Optimizer: Adam  
