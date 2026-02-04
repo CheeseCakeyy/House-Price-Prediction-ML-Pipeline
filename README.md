@@ -65,11 +65,11 @@ All preprocessing and modeling steps were implemented using **Pipelines** to ens
 ### Model Performance (Iteration 1)
  
  ```text
-- Validation **R² score**: ~0.84  
-- Validation **MAE**: ~17,200  
-- Validation **RMSE**: ~26,308  
-- **Kaggle Leaderboard Score(Test RMSE Score)**: ~16963.88  
-- Rank: **1840 / 4647 (~Top 39%)**
+- Validation R² score: ~0.84  
+- Validation MAE: ~17,200  
+- Validation RMSE: ~26,308  
+- Kaggle Leaderboard Score(Test RMSE Score): ~16963.88  
+- Rank: 1840 / 4647 (~Top 39%)
  ```
 This served as a strong baseline for further experimentation.
 
@@ -123,9 +123,9 @@ Input (79 features)
 The deep learning model significantly outperformed the classical ML baseline:
 
 ```text
-- **Kaggle Leaderboard Score: ~15403.56 RMSE**
+- Kaggle Leaderboard Score: ~15403.56 RMSE
 - Improvement from baseline: ~16963.88  → 15403.56 RMSE
-- Rank: **1840 → 400**
+- Rank: 1840 → 400
 ```
 This demonstrated that, for this dataset, a properly designed neural network combined with strong preprocessing can greatly outperform tree-based models.
 
