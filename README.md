@@ -67,7 +67,7 @@ All preprocessing and modeling steps were implemented using **Pipelines** to ens
 - Validation **MAE**: ~17,200  
 - Validation **RMSE**: ~26,308  
 - **Kaggle Leaderboard Score(Test RMSE Score)**: ~16963.88  
-- Rank: **1963 / 4647 (~Top 42%)**
+- Rank: **1840 / 4647 (~Top 39%)**
 
 This served as a strong baseline for further experimentation.
 
@@ -101,3 +101,71 @@ Input (79 features)
 
 
 
+- Activation: ReLU for hidden layers  
+- Optimizer: Adam  
+- Loss: Mean Squared Error  
+- Metric: Root Mean Squared Error  
+
+---
+
+### Training Setup
+
+- Data preprocessing handled with scikit-learn  
+- Training performed on Kaggle Notebooks using GPU accelerator  
+- Batch size tuning and early experimentation with learning parameters
+
+---
+
+### Results – Iteration 2
+
+The deep learning model significantly outperformed the classical ML baseline:
+
+- **Kaggle Leaderboard Score: ~15403.56 RMSE**
+- Improvement from baseline: ~16963.88  → 15403.56 RMSE
+- Rank: **1840 → 400**
+
+This demonstrated that, for this dataset, a properly designed neural network combined with strong preprocessing can greatly outperform tree-based models.
+
+---
+
+## Key Learnings
+
+Through both iterations, the following important lessons were learned:
+
+- Proper preprocessing is critical for tabular deep learning  
+- Neural networks can be integrated smoothly with sklearn pipelines  
+- Validation metrics can sometimes appear misleading compared to leaderboard results  
+- Feature engineering remains valuable even for deep learning models  
+- Pipelines prevent data leakage and ensure reproducible results  
+- GPU acceleration is not always necessary for small tabular networks  
+
+---
+
+## Repository Structure
+
+house-price-prediction-ml-pipeline/
+├── house_price_prediction_classical_ml_approach.py
+├── housing-prices-competition-deep-learning-approach.ipynb
+├── submission.csv
+├── submission_DL(1).csv
+└── README.md
+
+
+---
+
+## Kaggle Competition
+
+Housing Prices Competition for Kaggle Learn Users  
+kaggle.com/competitions/home-data-for-ml-course
+---
+
+## Final Notes
+
+This project was built as a practical learning exercise to:
+
+- understand end-to-end ML workflows  
+- compare classical ML vs deep learning  
+- gain hands-on experience with Kaggle competitions  
+- strengthen debugging and model evaluation skills  
+
+The transition from a Random Forest baseline to a deep learning solution provided valuable insights into how neural networks behave on structured tabular data.
