@@ -122,10 +122,11 @@ Input (79 features)
 
 The deep learning model significantly outperformed the classical ML baseline:
 
+```text
 - **Kaggle Leaderboard Score: ~15403.56 RMSE**
 - Improvement from baseline: ~16963.88  → 15403.56 RMSE
 - Rank: **1840 → 400**
-
+```
 This demonstrated that, for this dataset, a properly designed neural network combined with strong preprocessing can greatly outperform tree-based models.
 
 ---
