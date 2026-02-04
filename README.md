@@ -1,5 +1,6 @@
 # housing-prices-KaggleComp-learning
 End-to-end machine learning pipeline for predicting housing prices using scikit-learn, built for the Kaggle Learn Housing Prices competition.
+Also consist of an end-to-end deep-learning approach addressing the same issue.
 
 ##  Project Overview
 This project focuses on predicting house prices using machine learning techniques on the **Housing Prices Competition for Kaggle Learn Users** dataset.  
@@ -17,7 +18,8 @@ Given various housing-related features such as location, size, and construction 
 - pandas, numpy  
 - scikit-learn  
 - matplotlib  
-
+- tensorflow
+- keras
 ---
 
 ##  Machine Learning Pipeline
@@ -26,7 +28,7 @@ All preprocessing and modeling steps were implemented using **scikit-learn Pipel
 **Pipeline steps:**
 - Missing value handling using `SimpleImputer`
 - Numerical features: median imputation
-- Categorical features: most-frequent imputation
+- Categorical features: most-frequent/missing imputation
 - Feature scaling using `StandardScaler`
 - Categorical feature encoding using `OneHotEncoder`
 - Feature selection using Lasso (`SelectFromModel`)
