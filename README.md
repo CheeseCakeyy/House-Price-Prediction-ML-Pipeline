@@ -144,14 +144,96 @@ Through both iterations, the following important lessons were learned:
 
 ---
 
+# Iteration 3 – Improved Deep Learning Approach
+
+### Objective
+
+After achieving strong results with the first deep learning model in Iteration 2, this iteration focused on further improving performance through better architecture design, stronger regularization, and more stable training techniques.
+
+The goal was to extract more predictive power from the existing features without changing the core dataset or preprocessing pipeline.
+
+---
+
+### Key Improvements Over Iteration 2
+
+The following enhancements were introduced compared to the previous deep learning model:
+
+- More refined and deeper neural network architecture  
+- Introduction of Dropout layers to reduce overfitting  
+- Better hyperparameter tuning:
+  - number of layers  
+  - neurons per layer  
+  - learning rate and optimizer settings  
+- Improved training strategy and validation monitoring  
+
+All preprocessing steps from earlier iterations were reused to ensure a fair and consistent comparison.
+
+---
+
+### Updated Neural Network Design
+
+The model architecture was redesigned to improve generalization and convergence:
+
+```text
+Input Features
+→ Dense(160, relu)
+→ Dropout layers
+→ Dense(80, relu)
+→ Dropout layers
+→ Dense(40, relu)
+→ Output layer (1 neuron)
+```
+
+This structure allowed the model to capture more complex relationships in the data while preventing overfitting.
+
+---
+
+### Results – Iteration 3
+
+This iteration produced the best results of the entire project:
+
+```text
+- Kaggle Leaderboard Score: ~14605 RMSE  
+- Previous DL Score: ~15403 RMSE  
+- Improvement: ~800 RMSE reduction  
+- Rank: 400 → 242 out of 4356 participants  
+```
+
+The improvements clearly demonstrate the impact of better architecture design and regularization on tabular deep learning performance.
+
+---
+
+### Key Takeaways from Iteration 3
+
+- Careful neural network design significantly improves tabular regression performance  
+- Regularization techniques like dropout and batch normalization are highly effective  
+- Deep learning models require structured experimentation and tuning  
+- Large performance gains are possible even without adding new features  
+
+This iteration confirmed that a well-designed deep learning model can substantially outperform both classical machine learning methods and earlier neural network versions.
+
+---
+
+## Overall Progress Across Iterations
+
+
+| Approach | Model Type | RMSE Score | Rank |
+|--------|------------|-----------|------|
+| Iteration 1 | Random Forest (Classical ML) | ~16963 | 1840 |
+| Iteration 2 | Basic Neural Network | ~15403 | 400 |
+| Iteration 3 | Improved Neural Network | ~14605 | 242 |
+
+
 ## Repository Structure
 
 ```text
 house-price-prediction-ml-pipeline/
 ├── house_price_prediction_classical_ml_approach.py
 ├── housing-prices-competition-deep-learning-approach.ipynb
+├── housing-prices-competition-deep-learning-approach-version(2).ipynb
 ├── submission.csv
 ├── submission_DL(1).csv
+├── submission_DL(2).csv
 └── README.md
  ```
 ---
