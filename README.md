@@ -181,7 +181,7 @@ Input Features
 → Dense(80, relu)
 → Dropout layers
 → Dense(40, relu)
-→ Output layer (1 neuron)
+→ Output layer(1)
 ```
 
 This structure allowed the model to capture more complex relationships in the data while preventing overfitting.
